@@ -199,35 +199,70 @@ gulp.task('copy:all', function() {
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
+// gulp.task('copy:libs', function() {
+//   return gulp
+//     .src(npmdist(), { base: paths.base.node.dir })
+//     .pipe(rename(function(path) {
+//         path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
+//     }))
+//     .pipe(gulp.dest(paths.dist.libs.dir));
+// });
+
 gulp.task('copy:libs', function() {
   return gulp
-    .src(npmdist(), { base: paths.base.node.dir })
+    .src([
+      'node_modules/tiny-slider/dist/**',
+      'node_modules/tobii/dist/**',
+      'node_modules/@mdi/font/css/**',
+      'node_modules/@iconscout/unicons/css/**',
+    ], { base: 'node_modules' })
     .pipe(rename(function(path) {
-        path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
+      path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
     }))
-    .pipe(gulp.dest(paths.dist.libs.dir));
+    .pipe(gulp.dest('dist/assets/libs'));
 });
 
-gulp.task('html', function() {
+
+
+// gulp.task('html', function() {
+//   return gulp
+//     .src([
+//       paths.src.html.files,
+//       '!' + paths.dist.base.files,
+//       '!' + paths.src.partials.files
+//     ])
+//     .pipe(fileinclude({
+//       prefix: '@@',
+//       basepath: '@file',
+//       indent: true,
+//     }))
+//     .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
+//     .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
+//     .pipe(useref())
+//     .pipe(cached())
+//     .pipe(gulpif('*.js', uglify()))
+//     .pipe(gulpif('*.css', cssnano({svgo: false})))
+//     .pipe(gulp.dest(paths.dist.base.dir));
+// });
+
+gulp.task('html', function () {
   return gulp
     .src([
       paths.src.html.files,
-      '!' + paths.dist.base.files,
-      '!' + paths.src.partials.files
+      '!' + paths.src.partials.files, // Exclude partials themselves
     ])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file',
-      indent: true,
     }))
-    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
-    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
+    .pipe(replace(/src="src\/assets\/libs\//g, 'src="assets/libs/')) // Fix JS paths
+    .pipe(replace(/href="src\/assets\/libs\//g, 'href="assets/libs/')) // Fix CSS paths
     .pipe(useref())
-    .pipe(cached())
     .pipe(gulpif('*.js', uglify()))
-    .pipe(gulpif('*.css', cssnano({svgo: false})))
+    .pipe(gulpif('*.css', cssnano({ svgo: false })))
     .pipe(gulp.dest(paths.dist.base.dir));
 });
+
 
 gulp.task('build', gulp.series(gulp.parallel('clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'), 'fileinclude', 'js', 'scss', 'html'));
 
